@@ -24,18 +24,18 @@ Notes:
 
 export default function Card(props) {
     return (
-        <section>
-        <div className ="card">
-            <img className="card--image" src={KatieImage} alt="Image of Katie Zaferes" />
+       
+        <div className="card">
+            <img src={`../images/${props.img}`} className="card--image" />
             <div className="card--stats">
-                <img className  ="card--star" src={star} alt="star icon" />
-                <span>5.0</span>
-                <span className="grey">(6) • </span>
-                <span className="grey">USA</span>
-             </div>
-             <h2>Life Lessons with Katie Zaferes</h2>
-            <p>From $136 / person</p>
+                <img src="../images/star.png" className="card--star" />
+                <span>{props.rating}</span>
+                <span className="gray">({props.reviewCount}) • </span>
+                <span className="gray">{props.location}</span>
+            </div>
+            <p>{props.title}</p>
+            <p><span className="bold">From ${props.price}</span> / person</p>
         </div>
-        </section>
+       
     )
 }
