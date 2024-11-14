@@ -98,3 +98,76 @@ section {
     border-radius: 2px;
     font-weight: bold;
 }
+
+/* Responsive adjustments */
+
+@media (max-width: 481px) {
+    .hero--photo {
+        max-width: 600px;
+    }
+    .card {
+        width: 375px;
+    }
+
+    .card--badge {
+        font-size: 25px;
+    }
+    .card--star {
+        height: 20px;
+    }
+    .card--stats {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero--photo {
+        max-width: 600px;
+    }
+    .card--badge {
+        font-size: 25px;
+    }
+    .card--star {
+        height: 20px;
+    }
+    .card--stats {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    nav {
+        justify-content: center;
+        height: 120px;
+    }
+    .nav--logo {
+        max-width: fit-content;
+    }
+
+    .hero--photo {
+        max-width: 600px;
+    }
+
+    .hero--header {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .card {
+        width: 200px;
+    }
+    .card--badge {
+        font-size: 15px;
+    }
+    .card--star {
+        height: 10px;
+    }
+    .card--stats {
+        font-size: 15px;
+    }
+}
