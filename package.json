@@ -1,5 +1,6 @@
 {
   "name": "airbnb-test",
+  "homepage": "https://jenoen.github.io/airbnb",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
