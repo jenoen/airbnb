@@ -1,5 +1,4 @@
 import React from "react";
-// import hero from "../../public/images/photo-grid.png" 
 
 export default function Hero (){
     return (
