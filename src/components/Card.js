@@ -1,4 +1,8 @@
 import React from "react"
+import star from "../../public/images/star.png"
+
+const imageContext = require.context("../../public/images", false, /\.(png|jpe?g|svg)$/);
+// In JavaScript, importing an entire folder isn't directly possible using the import statement. However, you can achieve this by dynamically importing files within a folder using Webpack's require.context() (in the context of Webpack) or another bundler's similar functionality
 
 
 export default function Card(props) {
@@ -9,13 +13,18 @@ export default function Card(props) {
         badgeText = "ONLINE"
     }
 
+    const coverImg = imageContext(`./${props.item.coverImg}`);
+
+
+
     return (
-       
         <div className="card">
             {badgeText && <div className="card--badge">{badgeText}</div>}
-            <img src={`./public/images/${props.item.coverImg}`} className="card--image" />
+            {/* <img src={`./public/images/${props.item.coverImg}`} className="card--image" /> */}
+            <img src={coverImg} className="card--image" />
+
             <div className="card--stats">
-                <img src={`./public/images/star.png`} className="card--star" />
+                <img src={star} className="card--star" />
                 <span>{props.item.stats.rating}</span>
                 <span className="gray">({props.item.stats.reviewCount}) • </span>
                 <span className="gray">{props.item.location}</span>
