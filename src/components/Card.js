@@ -13,7 +13,7 @@ export default function Card(props) {
         badgeText = "ONLINE"
     }
 
-    const coverImg = imageContext(`./public/images/${props.item.coverImg}`);
+    const coverImg = imageContext(`./${props.item.coverImg}`);
 
 
 
